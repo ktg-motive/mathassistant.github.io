@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daphne High School Math Assistant</title>
+    <style>
+        :root {
+            --purple: #4B0082;
+            --gold: #FFD700;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, var(--purple) 0%, #2C0047 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--gold);
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--gold);
+        }
+
+        .feature h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Daphne High School</h1>
+            <div class="subtitle">Advanced Geometry Math Assistant</div>
+        </div>
+
+        <div class="info-box">
+            <h2>Welcome to Your Personal Math Tutor!</h2>
+            <p>Get help with Advanced Geometry concepts, homework assistance, and step-by-step problem solving.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Homework Help</h3>
+                <p>Get guided assistance with your geometry assignments</p>
+            </div>
+            <div class="feature">
+                <h3>Test Prep</h3>
+                <p>Practice problems and concept review</p>
+            </div>
+            <div class="feature">
+                <h3>Step-by-Step</h3>
+                <p>Detailed explanations for better understanding</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("message",function(t){var e=document.getElementById("openassistantgpt-chatbot-iframe"),s=document.getElementById("openassistantgpt-chatbot-button-iframe");"openChat"===t.data&&(console.log("Toggle chat visibility"),e&&s?(e.contentWindow.postMessage("openChat","*"),s.contentWindow.postMessage("openChat","*"),e.style.pointerEvents="auto",e.style.display="block",window.innerWidth<640?(e.style.position="fixed",e.style.width="100%",e.style.height="100%",e.style.top="0",e.style.left="0",e.style.zIndex="9999"):(e.style.position="fixed",e.style.width="480px",e.style.height="65vh",e.style.bottom="0",e.style.right="0",e.style.top="",e.style.left="")):console.error("iframe not found")),"closeChat"===t.data&&e&&s&&(e.style.display="none",e.style.pointerEvents="none",e.contentWindow.postMessage("closeChat","*"),s.contentWindow.postMessage("closeChat","*"))});
+    </script>
+
+    <iframe src="https://www.openassistantgpt.io/embed/cm7disg7u00075rg5fxcx7pfc/button?chatbox=false"
+        style="z-index: 50; margin-right: 6px; margin-bottom: 6px; position: fixed; right: 0; bottom: 0; width: 60px; height: 60px; border: 0; border: 2px solid #FFD700; border-radius: 50%; color-scheme: none; background: none; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);"
+        id="openassistantgpt-chatbot-button-iframe"></iframe>
+
+    <iframe src="https://www.openassistantgpt.io/embed/cm7disg7u00075rg5fxcx7pfc/window?chatbox=false&withExitX=true"
+        style="z-index: 50; margin-right: 6px; margin-bottom: 98px; display: none; position: fixed; right: 0; bottom: 0; pointer-events: none; overflow: hidden; height: 65vh; border: 2px solid #FFD700; border-radius: 0.375rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); width: 480px;"
+        allow="clipboard-read; clipboard-write"
+        allowfullscreen id="openassistantgpt-chatbot-iframe"></iframe>
+</body>
+</html>
